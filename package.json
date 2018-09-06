@@ -1,0 +1,29 @@
+{
+  "name": "babel-typescript-sample",
+  "version": "0.7.0",
+  "license": "MIT",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "build": "npm run build-types && npm run build-js",
+    "build-types": "tsc --emitDeclarationOnly",
+    "build-js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "typescript": "^3.0.1",
+    "babel-loader": "^8.0.2",
+    "webpack": "^4.17.2"
+  },
+  "dependencies": {
+    "@types/react": "^16.4.13",
+    "@types/react-dom": "^16.0.7",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}
